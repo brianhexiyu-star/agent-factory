@@ -124,6 +124,10 @@ export function createAgent(companyId: string, data: CreateAgentInput): Promise<
   return apiPost<Agent>(`/api/companies/${companyId}/agents`, data)
 }
 
+export function updateAgent(agentId: string, data: Partial<CreateAgentInput> & { status?: string }): Promise<Agent> {
+  return apiPatch<Agent>(`/api/agents/${agentId}`, data)
+}
+
 export function deleteAgent(agentId: string): Promise<void> {
   return apiDelete<void>(`/api/agents/${agentId}`)
 }

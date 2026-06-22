@@ -6,7 +6,7 @@ import { toastRef } from './lib/toastRef'
 import Nav from './components/Nav'
 import Dashboard from './pages/Dashboard'
 import Agents from './pages/Agents'
-import Org from './pages/Org'
+import OrgChart from './pages/OrgChart'
 import Tasks from './pages/Tasks'
 import { useEffect } from 'react'
 
@@ -32,7 +32,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/agents" element={<Agents />} />
-              <Route path="/org" element={<Org />} />
+              <Route path="/org" element={<OrgChart />} />
               <Route path="/tasks" element={<Tasks />} />
             </Routes>
           </main>
